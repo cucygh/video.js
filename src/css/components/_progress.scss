@@ -16,6 +16,7 @@
   @include flex(auto);
   @include display-flex(center);
   min-width: 4em;
+  cursor: pointer;
 }
 
 .vjs-live .vjs-progress-control {
@@ -31,7 +32,7 @@
 
 // We need an increased hit area on hover
 .video-js .vjs-progress-control:hover .vjs-progress-holder {
-  font-size: 1.666666666666666666em;
+  // font-size: 1.666666666666666666em;
 }
 
 /* If we let the font size grow as much as everything else, the current time tooltip ends up
@@ -44,7 +45,7 @@
 .video-js .vjs-progress-control:hover .vjs-play-progress:after {
   font-family: $text-font-family;
   visibility: visible;
-  font-size: 0.6em;
+  // font-size: 0.6em;
 }
 
 // Progress Bars

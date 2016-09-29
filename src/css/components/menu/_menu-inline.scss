@@ -1,6 +1,7 @@
 .video-js .vjs-menu-button-inline {
   @include transition(all 0.4s);
   overflow: hidden;
+  width: 9em!important;
 }
 
 .video-js .vjs-menu-button-inline:before {
@@ -16,7 +17,7 @@
 .video-js .vjs-menu-button-inline.vjs-slider-active,
 .video-js.vjs-no-flex .vjs-menu-button-inline {
   // This width is currently specific to the inline volume bar.
-  width: 12em;
+  // width: 9em;
 }
 // Don't transition when tabbing in reverse to the volume menu
 // because it looks weird
@@ -25,12 +26,12 @@
 }
 
 .vjs-menu-button-inline .vjs-menu {
-  opacity: 0;
+  opacity: 1;
   height: 100%;
   width: auto;
 
   position: absolute;
-  left: 4em;
+  left: 3em;
   top: 0;
 
   padding: 0;

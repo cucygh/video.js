@@ -47,24 +47,33 @@ class ControlBar extends Component {
     });
   }
 }
-
+/**
+ *
+ * 修改日志
+ *
+ * 日期         类型    修改人          描述
+ * 2016-09-27  修改    yinguohui      去除多余的控件
+ * 2016-09-27  修改    yinguohui      调整声音控件的顺序从playToggle后面移动到fullscreenToggle前面
+ * 2016-09-29  修改    yinguohui      调整当前时间、剩余时间的顺序
+ *
+ */
 ControlBar.prototype.options_ = {
   children: [
     'playToggle',
-    'volumeMenuButton',
+    'progressControl',
+    // 'liveDisplay',
+    // 'remainingTimeDisplay',
     'currentTimeDisplay',
     'timeDivider',
     'durationDisplay',
-    'progressControl',
-    'liveDisplay',
-    'remainingTimeDisplay',
     'customControlSpacer',
     'playbackRateMenuButton',
-    'chaptersButton',
-    'descriptionsButton',
-    'subtitlesButton',
-    'captionsButton',
-    'audioTrackButton',
+    // 'chaptersButton',
+    // 'descriptionsButton',
+    // 'subtitlesButton',
+    // 'captionsButton',
+    // 'audioTrackButton',
+    'volumeMenuButton',
     'fullscreenToggle'
   ]
 };

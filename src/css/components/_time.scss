@@ -2,10 +2,10 @@
   @include flex(none);
   font-size: 1em;
   line-height: 3em;
-  min-width: 2em;
+  // min-width: 2em;
   width: auto;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 1px;
+  padding-right: 1px;
 }
 
 .vjs-live .vjs-time-control {
@@ -15,16 +15,18 @@
 // We need the extra specificity that referencing .vjs-no-flex provides.
 .video-js .vjs-current-time,
 .vjs-no-flex .vjs-current-time {
-  display: none;
+  // display: none;
+  padding-left: 1em;
 }
 
 .video-js .vjs-duration,
 .vjs-no-flex .vjs-duration {
-  display: none;
+  // display: none;
+  padding-right: 1em;
 }
 
 .vjs-time-divider {
-  display: none;
+  // display: none;
   line-height: 3em;
 }
 

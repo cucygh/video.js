@@ -19,11 +19,11 @@ import VolumeBar from './volume-control/volume-bar.js';
 class VolumeMenuButton extends PopupButton {
 
   constructor(player, options = {}) {
+
     // Default to inline
     if (options.inline === undefined) {
       options.inline = true;
     }
-
     // If the vertical option isn't passed at all, default to true.
     if (options.vertical === undefined) {
       // If an inline volumeMenuButton is used, we should default to using
