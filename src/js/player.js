@@ -42,7 +42,6 @@ import './control-bar/control-bar.js';
 import './error-display.js';
 import './tracks/text-track-settings.js';
 
-
 // Import Html5 tech, at least for disposing the original video tag.
 import './tech/html5.js';
 
@@ -2364,10 +2363,11 @@ class Player extends Component {
    * @method reportUserActivity
    */
   reportUserActivity(event) {
-    const callback=this.options_.reporter;
+    const callback = this.options_.reporter;
+
     this.userActivity_ = true;
-    if(event&&callback&&callback instanceof Function){
-        callback.call(this,event);
+    if(event && callback && callback instanceof Function) {
+      callback.call(this, event);
     }
   }
 

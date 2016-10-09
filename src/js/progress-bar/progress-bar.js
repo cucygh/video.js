@@ -6,7 +6,6 @@ import Component from '../component.js';
 // Required children
 import './progress-control/progress-control.js';
 
-
 /**
  * Container of main controls
  *
