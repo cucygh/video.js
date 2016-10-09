@@ -23,6 +23,8 @@
 .vjs-no-flex .vjs-duration {
   // display: none;
   padding-right: 1em;
+  flex-grow: 1;
+  text-align: left;
 }
 
 .vjs-time-divider {

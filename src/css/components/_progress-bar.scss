@@ -1,0 +1,50 @@
+.video-js .vjs-progress-bar {
+  display: none;
+  width: 100%;
+  position: absolute;
+  bottom: 2.5em;
+  left: 0;
+  right: 0;
+  height: 1.4em;
+  z-index: 2;
+  // @include background-color-with-alpha($primary-background-color, $primary-background-transparency);
+}
+
+// Video has started playing
+.vjs-has-started .vjs-progress-bar {
+  @include display-flex;
+  visibility: visible;
+  opacity: 1;
+
+  $trans: visibility 0.1s, opacity 0.1s; // Var needed because of comma
+  @include transition($trans);
+}
+
+// Video has started playing AND user is inactive
+.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-progress-bar {
+  // Remain visible for screen reader and keyboard users
+  visibility: visible;
+  opacity: 0;
+
+  $trans: visibility 1.0s, opacity 1.0s;
+  @include transition($trans);
+
+}
+
+.vjs-progresss-disabled .vjs-progress-bar,
+.vjs-using-native-progresss .vjs-progress-bar,
+.vjs-error .vjs-progress-bar {
+  // !important is ok in this context.
+  display: none !important;
+}
+
+// Don't hide the progress bar if it's audio
+.vjs-audio.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-progress-bar {
+  opacity: 1;
+  visibility: visible;
+}
+
+// IE 8 + 9 Support
+.vjs-has-started.vjs-no-flex .vjs-progress-bar {
+  display: table;
+}

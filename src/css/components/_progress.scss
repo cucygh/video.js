@@ -27,6 +27,9 @@
 .video-js .vjs-progress-holder {
   @include flex(auto);
   @include transition(all 0.2s);
+  &.vjs-slider{
+      margin: 0;
+  }
   height: 0.3em;
 }
 
@@ -73,7 +76,7 @@
   }
 }
 .video-js .vjs-play-progress {
-  background-color: $primary-foreground-color;
+  background-color: $progress-play-bgcolor;
   @extend .vjs-icon-circle;
 
   // Progress handle

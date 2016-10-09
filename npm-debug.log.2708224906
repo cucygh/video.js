@@ -1,0 +1,30 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/5.10.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'lint' ]
+2 info using npm@3.10.7
+3 info using node@v5.10.1
+4 verbose run-script [ 'prelint', 'lint', 'postlint' ]
+5 info lifecycle video.js@5.12.1~prelint: video.js@5.12.1
+6 silly lifecycle video.js@5.12.1~prelint: no script for prelint, continuing
+7 info lifecycle video.js@5.12.1~lint: video.js@5.12.1
+8 verbose lifecycle video.js@5.12.1~lint: unsafe-perm in lifecycle true
+9 verbose lifecycle video.js@5.12.1~lint: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/ygh/video-player/video.js/node_modules/.bin:/Users/ygh/video-player/video.js/node_modules/.bin:/Users/ygh/video-player/node_modules/.bin:/Users/ygh/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/usr/local/Cellar/node/5.10.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+10 verbose lifecycle video.js@5.12.1~lint: CWD: /Users/ygh/video-player/video.js
+11 silly lifecycle video.js@5.12.1~lint: Args: [ '-c', 'vjsstandard' ]
+12 verbose stack Error: write EPIPE
+12 verbose stack     at exports._errnoException (util.js:890:11)
+12 verbose stack     at WriteWrap.afterWrite (net.js:767:14)
+13 verbose cwd /Users/ygh/video-player/video.js
+14 error Darwin 15.6.0
+15 error argv "/usr/local/Cellar/node/5.10.0/bin/node" "/usr/local/bin/npm" "run" "lint"
+16 error node v5.10.1
+17 error npm  v3.10.7
+18 error code EPIPE
+19 error errno EPIPE
+20 error syscall write
+21 error write EPIPE
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]

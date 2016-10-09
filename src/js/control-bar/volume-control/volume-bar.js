@@ -21,6 +21,10 @@ class VolumeBar extends Slider {
   constructor(player, options) {
     super(player, options);
     this.on(player, 'volumechange', this.updateARIAAttributes);
+    player.ready(Fn.bind(this,function(){
+        const volume = (player.options_.playerOptions.defaultVolume).toFixed(2);
+        this.player_.volume(volume);
+    }));
     player.ready(Fn.bind(this, this.updateARIAAttributes));
   }
 

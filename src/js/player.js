@@ -37,9 +37,11 @@ import './tracks/text-track-display.js';
 import './loading-spinner.js';
 import './big-play-button.js';
 import './close-button.js';
+import './progress-bar/progress-bar.js';
 import './control-bar/control-bar.js';
 import './error-display.js';
 import './tracks/text-track-settings.js';
+
 
 // Import Html5 tech, at least for disposing the original video tag.
 import './tech/html5.js';
@@ -1126,8 +1128,8 @@ class Player extends Component {
    * @private
    * @method handleStageClick_
    */
-  handleStageClick_() {
-    this.reportUserActivity();
+  handleStageClick_(e) {
+    this.reportUserActivity(e);
   }
 
   /**
@@ -2362,7 +2364,11 @@ class Player extends Component {
    * @method reportUserActivity
    */
   reportUserActivity(event) {
+    const callback=this.options_.reporter;
     this.userActivity_ = true;
+    if(event&&callback&&callback instanceof Function){
+        callback.call(this,event);
+    }
   }
 
   /**
@@ -2448,8 +2454,8 @@ class Player extends Component {
       mouseInProgress = this.setInterval(handleActivity, 250);
     };
 
-    const handleMouseUp = function(event) {
-      handleActivity();
+    const handleMouseUp = function(e) {
+      handleActivity(e);
       // Stop the interval that maintains activity if the mouse/touch is down
       this.clearInterval(mouseInProgress);
     };
@@ -2910,7 +2916,7 @@ Player.prototype.options_ = {
   flash: {},
 
   // defaultVolume: 0.85,
-  defaultVolume: 0.00,
+  defaultVolume: 0.85,
 
   // default inactivity timeout
   inactivityTimeout: 2000,
@@ -2927,6 +2933,7 @@ Player.prototype.options_ = {
     'textTrackDisplay',
     'loadingSpinner',
     'bigPlayButton',
+    'progressBar',
     'controlBar',
     'errorDisplay',
     'textTrackSettings'
