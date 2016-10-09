@@ -2366,7 +2366,7 @@ class Player extends Component {
     const callback = this.options_.reporter;
 
     this.userActivity_ = true;
-    if(event && callback && callback instanceof Function) {
+    if (event && callback && callback instanceof Function) {
       callback.call(this, event);
     }
   }
