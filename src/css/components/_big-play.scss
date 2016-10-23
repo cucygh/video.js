@@ -22,6 +22,8 @@
   // Since the big play button doesn't inherit from vjs-control, we need to specify a bit more than
   // other buttons for the icon.
   &:before {
+    font-family: iconfont;
+    font-size: 16px;
     @extend %icon-default;
   }
 }
