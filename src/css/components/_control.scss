@@ -8,12 +8,12 @@
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 4em;
+  width: 2em;
   @include flex(none);
 
   &:before {
-    font-size: 1.8em;
-    line-height: 1.7;
+    font-size: 0.8em;
+    line-height: 2.6;
 
     @extend %icon-default;
   }

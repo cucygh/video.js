@@ -30,7 +30,7 @@
   &.vjs-slider{
       margin: 0;
   }
-  height: 0.3em;
+  height: 0.2em;
 }
 
 // We need an increased hit area on hover
@@ -58,7 +58,7 @@
 .video-js .vjs-progress-holder .vjs-load-progress div {
   position: absolute;
   display: block;
-  height: 0.3em;
+  height: 0.2em;
   margin: 0;
   padding: 0;
   // updated by javascript during playback

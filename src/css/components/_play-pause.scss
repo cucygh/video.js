@@ -2,6 +2,12 @@
   cursor: pointer;
   @include flex(none);
   @extend .vjs-icon-play;
+  &:before{
+    font-size: 1.1em!important;
+    width: 2.2em!important;
+    position: relative;
+    line-height: 1;
+  }
 }
 .video-js .vjs-play-control.vjs-playing {
   @extend .vjs-icon-pause;

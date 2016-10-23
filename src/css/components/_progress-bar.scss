@@ -2,10 +2,10 @@
   display: none;
   width: 100%;
   position: absolute;
-  bottom: 2.5em;
+  bottom: 1.67em;
   left: 0;
   right: 0;
-  height: 1.4em;
+  height: 0.8em;
   z-index: 2;
   // @include background-color-with-alpha($primary-background-color, $primary-background-transparency);
 }
@@ -24,6 +24,7 @@
 .vjs-has-started.vjs-user-inactive.vjs-playing .vjs-progress-bar {
   // Remain visible for screen reader and keyboard users
   visibility: visible;
+  visibility: hidden\9;
   opacity: 0;
 
   $trans: visibility 1.0s, opacity 1.0s;
