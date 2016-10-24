@@ -33,15 +33,16 @@ $tt-icon-font-path: 'font' !default;
 
 // http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
 $icons: (
-          play: 'e65d',
-          play-circle: 'f102',
-          pause: 'e65f',
-          volume-mute: 'e65b',
-          volume-low: 'e659',
-          volume-mid: 'e65a',
-          volume-high: 'e658',
-          fullscreen-enter: 'e657',
-          fullscreen-exit: 'e65e',
+          play: 'e608',
+          play-circle: 'e602',
+          circle:'e602',
+          pause: 'e60a',
+          volume-mute: 'e606',
+          volume-low: 'e604',
+          volume-mid: 'e605',
+          volume-high: 'e601',
+          fullscreen-enter: 'e600',
+          fullscreen-exit: 'e609',
 );
 
 // NOTE: This is as complex as we want to get with SCSS functionality.

@@ -26,11 +26,28 @@
 // Box containing play and load progresses. Also acts as seek scrubber.
 .video-js .vjs-progress-holder {
   @include flex(auto);
-  @include transition(all 0.2s);
+  // @include transition(all 0.2s);
   &.vjs-slider{
       margin: 0;
   }
   height: 0.2em;
+}
+
+.vjs-progress-bar:hover{
+  bottom: 1.72em;
+  .vjs-progress-holder{
+    height: 0.3em;
+    .vjs-load-progress,.vjs-mouse-display,.vjs-play-progress{
+      height: 0.3em;
+      div{
+        height: 0.3em;
+      }
+    }
+    .vjs-play-progress:before{
+      display: block;
+      top: -.333333333333333em;
+    }
+  }
 }
 
 // We need an increased hit area on hover
@@ -81,10 +98,11 @@
 
   // Progress handle
   &:before {
+    display: none;
     position: absolute;
     top: -0.333333333333333em;
     right: -0.5em;
-    font-size: 0.9em;
+    font-size: 0.7em;
   }
 }
 
@@ -96,12 +114,12 @@
   visibility: hidden;
   pointer-events: none;
   position: absolute;
-  top: -3.4em;
+  top: -3em;
   right: -1.9em;
-  font-size: 0.9em;
+  font-size: 0.6em;
   color: #000;
   content: attr(data-current-time);
-  padding: 6px 8px 8px 8px;
+  padding: 4px 6px 6px 6px;
   @include background-color-with-alpha(#fff, 0.8);
   @include border-radius(0.3em);
 }
@@ -138,7 +156,7 @@
 
 .video-js .vjs-time-tooltip {
   display: inline-block;
-  height: 2.4em;
+  height: 0.7em;
   position: relative;
   float: right;
   right: -1.9em;
