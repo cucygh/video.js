@@ -50,12 +50,13 @@
   // Volume handle
   &:before {
     content: ' ';
+    box-shadow: 0px 0px 5px 0px rgba(255,59,48,0.60);
     border-radius: 1px;
     background: #fff;
     width: 4px;
     height: 8px;
     position: absolute;
-    top: -.1em!important;
+    top: -.12em!important;
     right: -.2em!important;
     font-size: 0.9em; // Doing this to match the handle on play progress.
   }

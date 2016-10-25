@@ -34,7 +34,7 @@
 }
 
 .vjs-progress-bar:hover{
-  bottom: 1.72em;
+  bottom: 1.74em;
   .vjs-progress-holder{
     height: 0.3em;
     .vjs-load-progress,.vjs-mouse-display,.vjs-play-progress{
@@ -46,6 +46,8 @@
     .vjs-play-progress:before{
       display: block;
       top: -.333333333333333em;
+      box-shadow: 0px 0px 5px 0px rgba(255,59,48,0.60);
+      border-radius: 0.7em;
     }
   }
 }
